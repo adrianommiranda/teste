@@ -8,16 +8,16 @@ A API expõe endpoints RESTful para manipulação de usuários. Os dados são pe
 
 ### Principais funcionalidades
 - **Contexto de aplicação: **/crud-usuario
-
--- **Listar todos os usuários:** `GET /usuario`
--- **http://localhost:8080/crud-usuario/usuario
+---
+- **Listar todos os usuários:** `GET /usuario`
+- **http://localhost:8080/crud-usuario/usuario
 
 - **Buscar por nome exato:** `GET /usuario/nome/{nome}`
 - **http://localhost:8080/crud-usuario/usuario/nome/Adriano
 
 - **Buscar usuário por ID:** `GET /usuario/id/{id}`
 - **http://localhost:8080/crud-usuario/usuario/id/10
-
+---
 - **Buscar por nome contendo (case-insensitive):** `GET /usuario/nomeignorecontaining/{nome}`
 - **http://localhost:8080/crud-usuario/usuario/nomeignorecontaining/Marian
 
@@ -26,7 +26,7 @@ A API expõe endpoints RESTful para manipulação de usuários. Os dados são pe
 
 - **Lista de nomes contendo (ignorando maiúsculas e minúsculas):** `GET /usuario/nome/containing/{nome}`
 - **http://localhost:8080/crud-usuario/usuario/nome/containing/CA
-
+---
 - **Lista de usuarios com idade > idade de entrada:** `GET /usuario/idade/maior-que/{idade}`
 - **http://localhost:8080/crud-usuario/usuario/idade/maior-que/18
 
@@ -35,9 +35,6 @@ A API expõe endpoints RESTful para manipulação de usuários. Os dados são pe
 
 - **Lista de usuarios com idade entre idade min e idade max:** `GET /usuario/idade/entre/{min}/{max}`
 - **http://localhost:8080/crud-usuario/usuario/idade/entre/8/10
-
-- **Contagem total de usuários:** `GET /usuario/total`
-- **http://localhost:8080/crud-usuario/usuario/total
 
 - **Contagem de usuários com idade maior que o valor informado** `GET /usuario/idade/maior-que/{idade}/total`
 - **http://localhost:8080/crud-usuario/usuario/idade/maior-que/50/total
@@ -50,9 +47,10 @@ A API expõe endpoints RESTful para manipulação de usuários. Os dados são pe
 
 - **Média de idade dos usuários** `GET /usuario/relatorios/media-idade`
 - **http://localhost:8080/crud-usuario/usuario/relatorios/media-idade
-
-
-
+---
+- **Contagem total de usuários:** `GET /usuario/total`
+- **http://localhost:8080/crud-usuario/usuario/total
+---
 - **Criar novo usuário:** `POST /usuario`
 - **http://localhost:8080/crud-usuario/usuario
 
