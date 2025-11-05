@@ -7,15 +7,62 @@ Esta aplicação é uma API REST desenvolvida com Spring Boot para gerenciar o c
 A API expõe endpoints RESTful para manipulação de usuários. Os dados são persistidos em um banco de dados relacional utilizando o Spring Data JPA, e o mapeamento entre entidades (Usuario) e objetos de transferência de dados (UsuarioDTO) é feito com a biblioteca ModelMapper.
 
 ### Principais funcionalidades
+- **Contexto de aplicação: **/crud-usuario
 
-- **Listar todos os usuários:** `GET /usuario/listartodos`
-- **Buscar usuário por ID:** `GET /usuario/id/{id}`
+- **Listar todos os usuários:** `GET /usuario`
+- **http://localhost:8080/crud-usuario/usuario
+
 - **Buscar por nome exato:** `GET /usuario/nome/{nome}`
+- **http://localhost:8080/crud-usuario/usuario/nome/Adriano
+
+- **Buscar usuário por ID:** `GET /usuario/id/{id}`
+- **http://localhost:8080/crud-usuario/usuario/id/10
+
 - **Buscar por nome contendo (case-insensitive):** `GET /usuario/nomeignorecontaining/{nome}`
- **Buscar por nome (ignorando maiúsculas/minúsculas):** `GET /usuario/nomeignorecontaining/{nome}`
-- **Criar novo usuário:** `POST /usuario/salvar`
-- **Atualizar usuário:** `PUT /usuario/atualizar/{id}`
-- **Remover usuário:** `DELETE /usuario/delete/{id}`
+- **http://localhost:8080/crud-usuario/usuario/nomeignorecontaining/Marian
+
+- **Buscar por nome (ignorando maiúsculas/minúsculas):** `GET /usuario/nomeignore/{nome}`
+- **http://localhost:8080/crud-usuario/usuario/nomeignore/adr
+
+- **Lista de nomes contendo (ignorando maiúsculas e minúsculas):** `GET /usuario/nome/containing/{nome}`
+- **http://localhost:8080/crud-usuario/usuario/nome/containing/CA
+
+- **Lista de usuarios com idade > idade de entrada:** `GET /usuario/idade/maior-que/{idade}`
+- **http://localhost:8080/crud-usuario/usuario/idade/maior-que/18
+
+- **Lista de usuarios com idade < idade de entrada:** `GET /usuario/idade/menor-que/{idade}`
+- **http://localhost:8080/crud-usuario/usuario/idade/menor-que/18
+
+- **Lista de usuarios com idade entre idade min e idade max:** `GET /usuario/idade/entre/{min}/{max}`
+- **http://localhost:8080/crud-usuario/usuario/idade/entre/8/10
+
+- **Contagem total de usuários:** `GET /usuario/total`
+- **http://localhost:8080/crud-usuario/usuario/total
+
+- **Contagem de usuários com idade maior que o valor informado** `GET /usuario/idade/maior-que/{idade}/total`
+- **http://localhost:8080/crud-usuario/usuario/idade/maior-que/50/total
+
+- **Lista de usuários com idade fora do intervalo 20 a 30** `GET /usuario/idade/entre2030`
+- **http://localhost:8080/crud-usuario/usuario/idade/entre2030
+
+- **Lista de usuários com idade fora do intervalo x a y** `GET /usuario/idade/fora-do-intervalo/{min}/{max}`
+- **http://localhost:8080/crud-usuario/usuario/idade/fora-do-intervalo/20/30
+
+- **Média de idade dos usuários** `GET /usuario/relatorios/media-idade`
+- **http://localhost:8080/crud-usuario/usuario/relatorios/media-idade
+
+
+
+- **Criar novo usuário:** `POST /usuario`
+- **http://localhost:8080/crud-usuario/usuario
+
+- **Atualizar usuário:** `PUT /usuario/{id}`
+- **http://localhost:8080/crud-usuario/usuario/100
+
+- **Remover usuário:** `DELETE /usuario/{id}`
+- **http://localhost:8080/crud-usuario/usuario/100
+
+
 
 ### Pré-requisitos
 
