@@ -9,8 +9,8 @@ A API expõe endpoints RESTful para manipulação de usuários. Os dados são pe
 ### Principais funcionalidades
 - **Contexto de aplicação: **/crud-usuario
 
-- **Listar todos os usuários:** `GET /usuario`
-- **http://localhost:8080/crud-usuario/usuario
+-- **Listar todos os usuários:** `GET /usuario`
+-- **http://localhost:8080/crud-usuario/usuario
 
 - **Buscar por nome exato:** `GET /usuario/nome/{nome}`
 - **http://localhost:8080/crud-usuario/usuario/nome/Adriano
